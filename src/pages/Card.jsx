@@ -14,7 +14,7 @@ function Card({ darkMode, checked, setChecked, filter, concepts = [] }) {
   })
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 h-full w-full">
       {visibleConcepts.map((card) => {
         const isChecked = !!checked[card.id];
 
@@ -22,7 +22,7 @@ function Card({ darkMode, checked, setChecked, filter, concepts = [] }) {
           return (
             <div
               key={card.id}
-              className={`h-50 flex-1 min-w-[340px] max-w-[400px] relative rounded-xl border p-4 transition-colors duration-200 ${
+              className={`h-50 flex-1 min-w-[310px] max-w-[400px] relative rounded-xl border p-4 transition-colors duration-200 ${
                 isChecked
                   ? "bg-green-500/15 border-green-500/60"
                   : "bg-gray-900 border-gray-700"
@@ -72,7 +72,7 @@ function Card({ darkMode, checked, setChecked, filter, concepts = [] }) {
         return (
           <div
             key={card.id}
-            className={`h-50 flex-1 min-w-[340px] max-w-[400px] relative rounded-xl border p-4 transition-colors duration-200 ${
+            className={`h-50 flex-1 min-w-[310px] max-w-[400px] relative rounded-xl border p-4 transition-colors duration-200 ${
               isChecked
                 ? "bg-green-500/15 border-green-500/60"
                 : "bg-white border-gray-300"

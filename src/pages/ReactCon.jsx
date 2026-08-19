@@ -86,25 +86,25 @@ const [checked, setChecked] = useState({})
   },
 ]
 
-    return (
- <div className={isDark 
-  ? "min-h-screen w-full overflow-x-hidden bg-gray-900 p-6"
-  : "min-h-screen w-full overflow-x-hidden bg-white p-6"}>
-      <div className ="flex flex-col gap-4 w-full">
-       <Header isDark={isDark} setIsDark={setIsDark} />
-       <div className="md:flex md:justify-between md:items-center gap-4 flex-wrap">
+   return (
+  <div className={isDark 
+    ? "min-h-screen w-full overflow-x-hidden bg-gray-900 p-4"
+    : "min-h-screen w-full overflow-x-hidden bg-white p-4"}>
+    
+    <div className="max-w-5xl mx-auto flex flex-col gap-4 w-full">
+      <Header isDark={isDark} setIsDark={setIsDark} />
+      <div className="md:flex md:justify-between md:items-center gap-4 flex-wrap">
         <Lable isDark={isDark} conceptNum={concepts.length} checkedCount={checkedCount} />
-       <FilterButton isDark={isDark} setFilter={setFilter} filter={filter} setChecked={setChecked} />
-        </div>
-          <ProgrBar isDark={isDark} conceptNum={concepts.length} checkedCount={checkedCount} />
-        </div>
-        <div className="flex justify-center p-6">
-        <Card darkMode={isDark} filter={filter} concepts={concepts} checked={checked} setChecked={setChecked} />
-        </div>
+        <FilterButton isDark={isDark} setFilter={setFilter} filter={filter} setChecked={setChecked} />
       </div>
-    )
-  }
+      <ProgrBar isDark={isDark} conceptNum={concepts.length} checkedCount={checkedCount} />
       
+      <Card darkMode={isDark} filter={filter} concepts={concepts} checked={checked} setChecked={setChecked} />
+    </div>
+    
+  </div>
+)
+}
 
 export default ReactCon
 
